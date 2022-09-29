@@ -9,8 +9,6 @@ import { Product } from '../../interfaces/product.interface';
 })
 export class ProductListComponent implements OnInit {
 
-  today = new Date('December 17, 1995 03:24:00')
-
   products: Product[] = [];
 
   constructor(private productService: ProductService) { }

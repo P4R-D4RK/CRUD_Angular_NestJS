@@ -17,9 +17,11 @@ export class ProductController {
     }
 
     @Get('/')
-    async getProducts() {
+    async getProducts(@Res() res) {
         const products = await this.productService.getProducts();
-        return products;
+        return res.status(HttpStatus.OK).json(
+            products
+        )
     }
 
     @Get('/:productID')
